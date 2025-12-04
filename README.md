@@ -1,10 +1,10 @@
-# Quant Signal Synthesizer: Machine Learning for Regime Detection
+# Quant Signal Synthesiser: Machine Learning for Trading
 ### A Meta-Labeling Framework using Random Forest & XGBoost to Filter Technical Strategies
 
-## 1. Executive Summary
-This project applies **Meta-Labeling**—a technique popularized by Marcos Lopez de Prado—to improve the risk-adjusted returns of a simple technical trading strategy.
+## 1. Summary
+This project applies **Meta-Labeling** to improve the risk-adjusted returns of a simple technical trading strategy.
 
-Instead of predicting price direction (which has a low signal-to-noise ratio), this project predicts the probability of trade success conditional on market regimes. By training Random Forest and XGBoost classifiers on "Market Weather" features (Volatility, VIX, Volume), the model learns to veto trades during high-risk conditions.
+Instead of predicting price direction (which has a low signal-to-noise ratio), this project predicts the probability of trade success conditional on market regimes. By training Random Forest and XGBoost classifiers on "Market Weather" features (Volatility, VIX, Volume), the model learns to avoid trades during high-risk conditions.
 
 > **Key Result:** The XGBoost Model successfully identified the 2022 Bear Market regime, reducing the portfolio's Maximum Drawdown by **~250 basis points** compared to the S&P 500 benchmark and achieving positive returns while the market fell.
 
@@ -110,4 +110,5 @@ quant-signal-synthesizer/
 │   ├── indicators.py       # Technical Feature Engineering
 │   ├── labeling.py         # Triple Barrier Logic implementation
 ├── requirements.txt
+
 └── README.md
